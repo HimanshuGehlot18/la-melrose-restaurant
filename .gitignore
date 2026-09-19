@@ -1,0 +1,25 @@
+# OS metadata
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python pycache
+__pycache__/
+*.py[cod]
+
+# Logs & temp
+*.log
+scratch/
