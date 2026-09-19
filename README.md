@@ -8,13 +8,11 @@ A luxury, modern web experience for **La Melrose**, a comfort classics brasserie
 
 ## 🌟 Key Features
 
-- **Cinematic Opening Motion**: Zero-allocation HTML5 Canvas particle engine simulating floating golden embers, accompanied by an animated monogram emblem and curtain reveal.
 - **Hero Motion Showcase**: Multi-slide atmospheric hero slider with touch swipe gesture support, directional controls, and pagination indicators.
-- **Chef's Special Dishes Lightbox**: Compact luxury dish cards with click-to-expand details showing high-res imagery, artisanal ingredient sourcing tags, and sommelier wine pairings.
-- **Curated Menu Experience**: Filterable categories (Starters, Handcrafted Pasta, Mains, Prime Steaks, Desserts, Wines) with dynamic image previews and mobile-friendly tap modal.
-- **Framed Executive Chef Section**: Elegant side-by-side presentation celebrating Executive Chef Alessandro Rossi with interactive counters and culinary philosophy.
-- **Interactive Reservation Suite**: Complete booking form with validation, party sizing, and smart slot selection.
-- **Social Gallery**: Curated Instagram feed and reel showcase with interactive likes and view metrics.
+- **Continuous Marquee Ticker**: Smooth, infinite gold badge ticker highlighting culinary distinctions and accolades.
+- **Social Gallery Showcase**: Curated Instagram and reel moments with interactive metrics.
+- **Interactive Reservation Suite**: Complete booking form with validation, party sizing, and date/slot selection.
+- **Fixed Glassmorphism Header**: Sleek sticky header with dynamic scroll transitions and mobile drawer menu.
 - **Fully Responsive Architecture**: Custom design system built with fluid clamp typography, dark emerald & gold palette, and mobile ergonomic controls.
 
 ---
@@ -23,7 +21,7 @@ A luxury, modern web experience for **La Melrose**, a comfort classics brasserie
 
 - **HTML5**: Semantic, accessible structure with microdata and SEO tags.
 - **CSS3**: Custom design tokens, glassmorphism, responsive CSS grid & flexbox, smooth cubic-bezier transitions.
-- **JavaScript (Vanilla ES6+)**: Modular interaction logic, touch ergonomics, and canvas rendering without heavy third-party framework overhead.
+- **JavaScript (Vanilla ES6+)**: Modular interaction logic and touch ergonomics without heavy third-party framework overhead.
 
 ---
 
