@@ -9,7 +9,6 @@ A luxury, modern web experience for **La Melrose**, a comfort classics brasserie
 ## 🌟 Key Features
 
 - **Hero Motion Showcase**: Multi-slide atmospheric hero slider with touch swipe gesture support, directional controls, and pagination indicators.
-- **Continuous Marquee Ticker**: Smooth, infinite gold badge ticker highlighting culinary distinctions and accolades.
 - **Social Gallery Showcase**: Curated Instagram and reel moments with interactive metrics.
 - **Interactive Reservation Suite**: Complete booking form with validation, party sizing, and date/slot selection.
 - **Fixed Glassmorphism Header**: Sleek sticky header with dynamic scroll transitions and mobile drawer menu.

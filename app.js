@@ -91,29 +91,9 @@ function initHeroCarousel() {
   goToSlide(0);
 }
 
-/* ---------- 2. Seamless Marquee Loop ---------- */
-function initMarquee() {
-  const marqueeTrack = document.getElementById('marqueeTrack');
-  if (!marqueeTrack) return;
 
-  const items = [
-    'Michelin Guide 2026',
-    'Wood-Fired Artisanal Cuisine',
-    'Barolo & Chianti Cellar',
-    'Bronze-Die Handcrafted Pasta',
-    'Brasserie Elegance',
-    'Open Tue – Sun',
-    'Private Dining Suites',
-    'Artisanal Wine Selection',
-    'Seasonal Tasting Menu'
-  ];
 
-  const htmlContent = items.map(text => `<span>${text}</span><i>✦</i>`).join('');
-  // Double for seamless infinite loop
-  marqueeTrack.innerHTML = htmlContent + htmlContent;
-}
-
-/* ---------- 3. Header Glassmorphism & Mobile Menu Drawer ---------- */
+/* ---------- 2. Header Glassmorphism & Mobile Menu Drawer ---------- */
 function initNavigation() {
   const header = document.getElementById('siteHeader');
   const nav = document.getElementById('mainNav');
@@ -167,7 +147,7 @@ function initNavigation() {
   }, { passive: true });
 }
 
-/* ---------- 4. Reservation Form Handling ---------- */
+/* ---------- 3. Reservation Form Handling ---------- */
 function initReservationForm() {
   const form = document.getElementById('resForm');
   const msg = document.getElementById('formMsg');
@@ -219,7 +199,7 @@ function initReservationForm() {
   });
 }
 
-/* ---------- 5. Scroll Spy for Main Navigation ---------- */
+/* ---------- 4. Scroll Spy for Main Navigation ---------- */
 function initScrollSpy() {
   const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
   const sections = [];
@@ -249,7 +229,7 @@ function initScrollSpy() {
   sections.forEach(s => spyObserver.observe(s.target));
 }
 
-/* ---------- 6. Staggered Scroll Reveal ---------- */
+/* ---------- 5. Staggered Scroll Reveal ---------- */
 function initScrollAnimations() {
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
@@ -264,7 +244,7 @@ function initScrollAnimations() {
   revealElements.forEach(el => revealObserver.observe(el));
 }
 
-/* ---------- 7. Robust Image Error Fallback Placeholder ---------- */
+/* ---------- 6. Robust Image Error Fallback Placeholder ---------- */
 function initImageFallback() {
   const PLACEHOLDER_SVG = 'data:image/svg+xml,' + encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
@@ -299,7 +279,6 @@ function initImageFallback() {
 /* ---------- Initialization on DOM Ready ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel();
-  initMarquee();
   initNavigation();
   initReservationForm();
   initScrollSpy();

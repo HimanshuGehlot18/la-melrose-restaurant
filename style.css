@@ -526,46 +526,8 @@ section {
   box-shadow: 0 0 10px var(--gold);
 }
 
-/* ---------- 4. Marquee Continuous Strip ---------- */
-.marquee {
-  background: var(--green-dark);
-  color: #fff;
-  overflow: hidden;
-  padding: 16px 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  user-select: none;
-}
 
-.marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  white-space: nowrap;
-  width: max-content;
-  animation: scrollX 32s linear infinite;
-  will-change: transform;
-}
-
-.marquee-track span {
-  font-size: 13px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.marquee-track i {
-  font-style: normal;
-  color: var(--gold);
-  font-size: 13px;
-  filter: drop-shadow(0 0 4px var(--gold));
-}
-
-@keyframes scrollX {
-  to { transform: translateX(-50%); }
-}
-
-/* ---------- 5. Social Gallery Section ---------- */
+/* ---------- 4. Social Gallery Section ---------- */
 .gallery {
   background: var(--paper);
   text-align: center;
@@ -701,7 +663,7 @@ section {
   margin-top: 40px;
 }
 
-/* ---------- 6. Reservation Section ---------- */
+/* ---------- 5. Reservation Section ---------- */
 .reservation {
   background: var(--green);
   color: #fff;
@@ -876,7 +838,7 @@ section {
   border: 1px solid #fad2d2;
 }
 
-/* ---------- 7. Footer ---------- */
+/* ---------- 6. Footer ---------- */
 footer {
   background: var(--paper);
   padding: clamp(50px, 6vw, 80px) 0 40px;
@@ -974,7 +936,7 @@ footer {
   color: var(--green);
 }
 
-/* ---------- 8. Floating Action Button for Mobile ---------- */
+/* ---------- 7. Floating Action Button for Mobile ---------- */
 .mobile-fab {
   display: none;
   position: fixed;
@@ -999,7 +961,7 @@ footer {
   display: inline-flex;
 }
 
-/* ---------- 9. Scroll Reveal Animations ---------- */
+/* ---------- 8. Scroll Reveal Animations ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
