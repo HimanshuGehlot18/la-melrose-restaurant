@@ -13,19 +13,21 @@ function initHeroCarousel() {
   const nextBtn = document.querySelector('.hero-arrow.next');
   const heroSection = document.querySelector('.hero');
 
-  if (!slides.length || !dotsWrap) return;
+  if (!slides.length) return;
 
   let current = 0;
   let autoTimer = null;
 
-  dotsWrap.innerHTML = '';
-  slides.forEach((_, i) => {
-    const btn = document.createElement('button');
-    btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    btn.addEventListener('click', () => goToSlide(i));
-    dotsWrap.appendChild(btn);
-  });
-  const dots = [...dotsWrap.children];
+  if (dotsWrap) {
+    dotsWrap.innerHTML = '';
+    slides.forEach((_, i) => {
+      const btn = document.createElement('button');
+      btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      btn.addEventListener('click', () => goToSlide(i));
+      dotsWrap.appendChild(btn);
+    });
+  }
+  const dots = dotsWrap ? [...dotsWrap.children] : [];
 
   function goToSlide(index) {
     slides[current].classList.remove('active');

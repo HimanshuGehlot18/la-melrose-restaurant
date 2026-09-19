@@ -491,50 +491,7 @@ section {
   color: var(--gold);
 }
 
-.hero-dots {
-  position: absolute;
-  bottom: 34px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  gap: 10px;
-}
 
-.hero-dots button {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  padding: 0;
-}
-
-/* 44x44px accessible touch tap target (WCAG 2.5.5 / 2.5.8) */
-.hero-dots button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 44px;
-  height: 44px;
-  transform: translate(-50%, -50%);
-}
-
-.hero-dots button.active {
-  background: var(--gold);
-  border-color: var(--gold);
-  transform: scale(1.25);
-  box-shadow: 0 0 12px var(--gold);
-}
-
-.hero-dots button:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
-}
 
 .hero::after {
   content: '↓';
