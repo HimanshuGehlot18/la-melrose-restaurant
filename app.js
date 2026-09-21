@@ -1,7 +1,7 @@
 /**
  * ============================================================================
- * LA MELROSE — LUXURY BRASSERIE CLIENT-SIDE APPLICATION
- * Responsive UI & Interactive Experience
+ * MAISON SÉLÉNÉ — HAUTE GASTRONOMIE & CELESTIAL BRASSERIE
+ * Client-Side Application & Interactive Culinary Experience
  * ============================================================================
  */
 
@@ -141,6 +141,20 @@ function initNavigation() {
     link.addEventListener('click', closeNav);
   });
 
+  // Close when clicking outside on drawer background
+  nav.addEventListener('click', (e) => {
+    if (e.target === nav) {
+      closeNav();
+    }
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      closeNav();
+    }
+  });
+
   // Close when resizing beyond tablet breakpoint
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900 && nav.classList.contains('open')) {
@@ -149,7 +163,58 @@ function initNavigation() {
   }, { passive: true });
 }
 
-/* ---------- 3. Reservation Form Handling ---------- */
+/* ---------- 3. Interactive Menu Category Filtering & Actions ---------- */
+function initMenuFiltering() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const menuCards = document.querySelectorAll('.menu-card');
+
+  if (!filterBtns.length || !menuCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filterValue = btn.getAttribute('data-filter');
+
+      // Update button active state & ARIA attributes
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      // Filter cards with smooth staggered fade
+      menuCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const match = filterValue === 'all' || category === filterValue;
+
+        if (match) {
+          card.classList.remove('hidden');
+          card.classList.remove('fade-in');
+          // Trigger reflow to restart css animation
+          void card.offsetWidth;
+          card.classList.add('fade-in');
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('fade-in');
+        }
+      });
+    });
+  });
+
+  // Handle "Reserve with this Dish" quick clicks
+  document.querySelectorAll('.card-reserve-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const dishName = link.getAttribute('data-dish');
+      const formMsg = document.getElementById('formMsg');
+      if (dishName && formMsg) {
+        formMsg.className = 'form-msg ok';
+        formMsg.textContent = `✦ Table request pre-noted for: "${dishName}". Complete the details below to confirm.`;
+      }
+    });
+  });
+}
+
+/* ---------- 4. Reservation Form Handling ---------- */
 function initReservationForm() {
   const form = document.getElementById('resForm');
   const msg = document.getElementById('formMsg');
@@ -195,8 +260,11 @@ function initReservationForm() {
       return;
     }
 
+    const expSelect = document.getElementById('rexperience');
+    const expText = expSelect ? expSelect.options[expSelect.selectedIndex].text : 'Main Brasserie Hall';
+
     msg.className = 'form-msg ok';
-    msg.textContent = `Grazie, ${name}! Your reservation request for ${guests} on ${date} at ${time} has been received. A confirmation email is on its way.`;
+    msg.textContent = `Merci beaucoup, ${name}! Your reservation request for ${guests} on ${date} at ${time} (${expText}) at Maison Séléné has been received. Our maître d'hôtel will send your confirmation shortly.`;
     form.reset();
   });
 }
@@ -257,10 +325,10 @@ function initImageFallback() {
         </linearGradient>
       </defs>
       <rect width="100%" height="100%" fill="url(#bg)"/>
-      <circle cx="400" cy="270" r="48" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.6"/>
-      <text x="400" y="278" font-family="'Dancing Script', cursive" font-size="28" fill="#d4af37" text-anchor="middle">LM</text>
-      <text x="400" y="350" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#ffffff" text-anchor="middle" letter-spacing="2">La Melrose Brasserie</text>
-      <text x="400" y="380" font-family="'Inter', sans-serif" font-size="13" fill="#d4af37" text-anchor="middle" letter-spacing="3">COMFORT CLASSICS</text>
+      <circle cx="400" cy="265" r="48" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.6"/>
+      <text x="400" y="275" font-family="'Playfair Display', Georgia, serif" font-size="28" fill="#d4af37" text-anchor="middle">☽ S</text>
+      <text x="400" y="348" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="2">Maison Séléné</text>
+      <text x="400" y="380" font-family="'Inter', sans-serif" font-size="12" fill="#d4af37" text-anchor="middle" letter-spacing="3">HAUTE GASTRONOMIE • CELESTIAL BRASSERIE</text>
     </svg>
   `);
 
@@ -282,6 +350,7 @@ function initImageFallback() {
 document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel();
   initNavigation();
+  initMenuFiltering();
   initReservationForm();
   initScrollSpy();
   initScrollAnimations();

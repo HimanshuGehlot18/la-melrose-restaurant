@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="La Melrose — A celebrated comfort classics brasserie crafting elevated cuisine, handcrafted pasta, and artisanal wines in a refined ambiance.">
-  <meta name="theme-color" content="#1d5c3f">
-  <title>La Melrose — Comfort Classics • Brasserie</title>
+  <meta name="description" content="Maison Séléné — An esteemed haute brasserie crafting celestial gastronomy, wood-fired prime cuts, artisanal pasta, and rare grand crus in an enchanting moonlit ambiance.">
+  <meta name="theme-color" content="#14432d">
+  <title>Maison Séléné — Haute Gastronomie • Celestial Brasserie</title>
 
   <!-- Google Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
   <!-- External Modern Design System & Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -20,17 +20,18 @@
 </head>
 <body>
 
-
   <!-- ===== 1. Modern Fixed Glass Header ===== -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="La Melrose Home">La Melrose</a>
+      <a href="#home" class="logo" aria-label="Maison Séléné Home">
+        <span class="logo-symbol">☽</span> Maison Séléné
+      </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
         <a href="#home" style="--i:0">Home</a>
-        <a href="#gallery" style="--i:1">Gallery</a>
-        <a href="#reservation" style="--i:2">Reservations</a>
-        <a href="#footer" style="--i:3">Contacts</a>
+        <a href="#menu" style="--i:1">Menu</a>
+        <a href="#gallery" style="--i:2">Moments</a>
+        <a href="#footer" style="--i:3">Contact</a>
         <a href="#reservation" class="nav-mobile-cta">Book a Table</a>
       </nav>
 
@@ -48,45 +49,50 @@
   <!-- ===== 2. Hero Section with Motion Slider ===== -->
   <section class="hero" id="home">
     <div class="slide active">
-      <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=1800&q=80" alt="Exquisitely plated gourmet dish">
+      <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=1800&q=80" alt="Exquisitely plated gourmet dish at Maison Séléné">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-        <span class="kicker">Comfort Classics • Brasserie</span>
-        <h1>Welcome to La Melrose</h1>
+        <span class="kicker">Haute Gastronomie • Celestial Brasserie</span>
+        <h1>Welcome to Maison Séléné</h1>
         <div class="slide-cta-row">
-          <a href="#reservation" class="btn-primary">Reserve Your Table</a>
-          <a href="#gallery" class="btn-secondary">View Gallery <span>↓</span></a>
+          <a href="#menu" class="btn-primary">Explore Our Menu <span>↓</span></a>
+          <a href="#reservation" class="btn-secondary">Reserve Your Table</a>
         </div>
       </div>
     </div>
 
     <div class="slide">
-      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1800&q=80" alt="Elegant candlelit restaurant table setting">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1800&q=80" alt="Elegant candlelit restaurant table setting under soft ambient lights">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-        <span class="kicker">Refined Dining Atmosphere</span>
-        <h1>Comfort Classics, Elevated</h1>
+        <span class="kicker">Refined Dining Under the Stars</span>
+        <h1>Comfort Classics, Elevated to Art</h1>
         <div class="slide-cta-row">
-          <a href="#reservation" class="btn-primary">Reserve Your Table</a>
-          <a href="#gallery" class="btn-secondary">Explore Moments <span>↓</span></a>
+          <a href="#menu" class="btn-primary">Discover the Menu</a>
+          <a href="#reservation" class="btn-secondary">Reserve an Evening <span>↓</span></a>
         </div>
       </div>
     </div>
 
     <div class="slide">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=80" alt="Executive chef finishing an artisanal entree">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=80" alt="Executive chef finishing an artisanal entree with celestial precision">
       <div class="slide-overlay"></div>
       <div class="slide-content">
-        <span class="kicker">Authentic Italian Heritage</span>
+        <span class="kicker">Heritage, Hearth &amp; Lunar Alchemy</span>
         <h1>Crafted with Passion &amp; Fire</h1>
         <div class="slide-cta-row">
-          <a href="#reservation" class="btn-primary">Reserve Your Table</a>
-          <a href="#reservation" class="btn-secondary">Plan an Evening <span>↓</span></a>
+          <a href="#menu" class="btn-primary">View Creations <span>↓</span></a>
+          <a href="#reservation" class="btn-secondary">Chef's Table Suite</a>
         </div>
       </div>
     </div>
 
-
+    <!-- Hero Navigation Arrows & Pagination Dots -->
+    <div class="hero-arrows" aria-label="Hero slider controls">
+      <button class="hero-arrow prev" aria-label="Previous Slide">‹</button>
+      <button class="hero-arrow next" aria-label="Next Slide">›</button>
+    </div>
+    <div class="hero-dots" id="heroDots" role="tablist" aria-label="Hero slider navigation"></div>
 
     <div class="hero-badges">
       <div class="badge">
@@ -98,21 +104,372 @@
       <div class="badge" style="font-family:Georgia,serif;font-size:11px;line-height:1.25">FIFTY<br>BEST<br>TABLES<br>—</div>
       <div class="badge" style="font-family:Georgia,serif;font-size:15px;font-weight:600">Forbes <span style="font-weight:400;font-size:10px">TRAVEL GUIDE 2026</span></div>
     </div>
-
   </section>
 
+  <!-- ===== 3. Gastronomic Menu Section ===== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="menu-header text-center reveal">
+        <span class="kicker menu-kicker">✦ Les Créations Culinaires ✦</span>
+        <h2 class="menu-title">Our Gastronomic Menu</h2>
+        <p class="menu-lead">An orchestration of seasonal harvests, artisanal French gastronomy, and celestial woodfire curated by Executive Chef Julian Vance.</p>
+      </div>
 
 
 
+      <!-- Category Filter Tabs -->
+      <div class="menu-tabs-wrapper reveal">
+        <div class="menu-filter-bar" role="tablist" aria-label="Menu Category Filter">
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All Creations</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="starters">Entrées &amp; Starters</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="mains">Plats Principaux</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="woodfire">Chef's Reserve &amp; Woodfire</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="desserts">Desserts &amp; Douceurs</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="drinks">Artisanal Elixirs &amp; Cellar</button>
+        </div>
+      </div>
 
-  <!-- ===== 3. Social Gallery ===== -->
+      <!-- Menu Grid -->
+      <div class="menu-grid reveal" id="menuGrid">
+
+        <!-- Dish 1: Starters -->
+        <article class="menu-card" data-category="starters">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=800&q=80" alt="Hokkaido Scallop Carpaccio" loading="lazy">
+            <span class="card-badge gold">Signature Starter</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Hokkaido Scallop Carpaccio</h3>
+              <span class="dish-price">₹2,450</span>
+            </div>
+            <p class="dish-desc">Thinly shaved wild Hokkaido scallops, cold-pressed Sicilian olive oil, Meyer lemon gel, oscietra caviar, and wild fennel pollen.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">GF</span>
+                <span class="dietary-pill">Raw Bar</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2022 Chablis Premier Cru</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Hokkaido Scallop Carpaccio">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 2: Starters -->
+        <article class="menu-card" data-category="starters">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80" alt="Périgord Black Truffle Tartine" loading="lazy">
+            <span class="card-badge">Seasonal Harvest</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Périgord Black Truffle Tartine</h3>
+              <span class="dish-price">₹2,250</span>
+            </div>
+            <p class="dish-desc">House-baked toasted brioche, whipped 18-month Comté cheese mousse, pan-roasted wild chanterelles, and freshly shaved black winter truffle.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Vegetarian</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2020 Meursault, Lafon</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Périgord Black Truffle Tartine">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+
+        <!-- Dish 4: Mains -->
+        <article class="menu-card featured" data-category="mains">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="A5 Miyazaki Wagyu Filet" loading="lazy">
+            <span class="card-badge gold">Chef's Crown Choice</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">A5 Miyazaki Wagyu Filet</h3>
+              <span class="dish-price">₹6,850</span>
+            </div>
+            <p class="dish-desc">Seared A5 Japanese beef tenderloin, silky Robuchon-style pomme mousseline, charred baby leeks, bone marrow bordelaise, and 24k gold leaf.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">GF</span>
+                <span class="dietary-pill">A5 Grade</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2017 Château Pichon Baron</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="A5 Miyazaki Wagyu Filet">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 5: Mains -->
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Dry-Aged Canard à l'Orange" loading="lazy">
+            <span class="card-badge">Brasserie Classic</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Dry-Aged Canard à l'Orange</h3>
+              <span class="dish-price">₹4,450</span>
+            </div>
+            <p class="dish-desc">14-day dry-aged French duck breast, crisp skin, blood orange reduction, roasted parsnip puree, glazed baby turnips, and crushed juniper berries.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">GF</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2019 Domaine Dujac Burgundy</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Dry-Aged Canard à l'Orange">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 6: Mains -->
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80" alt="Chilean Sea Bass en Papillote" loading="lazy">
+            <span class="card-badge">Wild Caught</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Chilean Sea Bass en Papillote</h3>
+              <span class="dish-price">₹4,750</span>
+            </div>
+            <p class="dish-desc">Wild Chilean sea bass baked with Persian saffron velouté, shaved fennel, sea beans, preserved Meyer lemon, and crisp caper berries.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">GF</span>
+                <span class="dietary-pill">DF</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2021 Puligny-Montrachet, Leflaive</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Chilean Sea Bass en Papillote">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 7: Mains -->
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80" alt="Agnolotti del Plin aux Morilles" loading="lazy">
+            <span class="card-badge">Handmade Pasta</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Agnolotti del Plin aux Morilles</h3>
+              <span class="dish-price">₹3,150</span>
+            </div>
+            <p class="dish-desc">Delicate handcrafted pasta pillows filled with artisanal ricotta, braised greens, simmered wild French morels, brown butter emulsion, and 24-mo Parmigiano.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Vegetarian</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2020 Barolo, Massolino</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Agnolotti del Plin aux Morilles">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 8: Woodfire -->
+        <article class="menu-card featured" data-category="woodfire">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=800&q=80" alt="Wood-Roasted Brittany Lobster Thermidor" loading="lazy">
+            <span class="card-badge gold">Hearth Specialty</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Wood-Roasted Lobster Thermidor</h3>
+              <span class="dish-price">₹6,250</span>
+            </div>
+            <p class="dish-desc">Live whole Atlantic lobster roasted over seasoned oak and cherry embers, Cognac-tarragon sabayon, melted Gruyère crust, and garden fine herbs.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Shellfish</span>
+                <span class="dietary-pill">Oak-Fired</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2018 Corton-Charlemagne Grand Cru</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Wood-Roasted Lobster Thermidor">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 9: Woodfire -->
+        <article class="menu-card" data-category="woodfire">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80" alt="45-Day Dry-Aged Prime Côte de Bœuf" loading="lazy">
+            <span class="card-badge">For Two Guests</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">45-Day Dry-Aged Côte de Bœuf</h3>
+              <span class="dish-price">₹11,500</span>
+            </div>
+            <p class="dish-desc">38oz bone-in prime ribeye carved tableside, roasted elephant garlic bone marrow, smoked Maldon fleur de sel, and reduction of aged Cabernet Sauvignon.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">GF</span>
+                <span class="dietary-pill">Serves 2</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2016 Brunello di Montalcino</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="45-Day Dry-Aged Côte de Bœuf">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 10: Desserts -->
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80" alt="Séléné Noir Dark Chocolate Dome" loading="lazy">
+            <span class="card-badge gold">Signature Confection</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Séléné Noir Chocolate Dome</h3>
+              <span class="dish-price">₹1,850</span>
+            </div>
+            <p class="dish-desc">72% Valrhona dark chocolate dome, smoked sea salt caramel heart, Piedmont hazelnut crunch, melted tableside with hot grand cru chocolate ganache.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Vegetarian</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 20-Year Tawny Port, Fladgate</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Séléné Noir Chocolate Dome">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 11: Desserts -->
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80" alt="Tahitian Vanilla Mille-Feuille" loading="lazy">
+            <span class="card-badge">Pastry Atelier</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Tahitian Vanilla Mille-Feuille</h3>
+              <span class="dish-price">₹1,650</span>
+            </div>
+            <p class="dish-desc">Caramelized inverted puff pastry leaves layered with whipped Tahitian bourbon vanilla bean diplomat cream, edible gold leaf, and wild raspberry coulis.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Vegetarian</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: 2017 Château d'Yquem</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Tahitian Vanilla Mille-Feuille">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 12: Desserts -->
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&q=80" alt="Yuzu & Basil Celestial Pavlova" loading="lazy">
+            <span class="card-badge">Light &amp; Crisp</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Yuzu &amp; Basil Celestial Pavlova</h3>
+              <span class="dish-price">₹1,550</span>
+            </div>
+            <p class="dish-desc">Delicate crisp lunar meringue sphere, tart Japanese yuzu curd, blackberries macerated in elderflower liqueur, and candied micro-basil.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Vegetarian</span>
+                <span class="dietary-pill">GF</span>
+              </div>
+              <span class="sommelier-note">🍷 Pairing: NV Billecart-Salmon Rosé</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Yuzu &amp; Basil Celestial Pavlova">Reserve with this Dish →</a>
+          </div>
+        </article>
+
+        <!-- Dish 13: Drinks -->
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Eclipse Old Fashioned" loading="lazy">
+            <span class="card-badge gold">Smoked Mixology</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Eclipse Old Fashioned</h3>
+              <span class="dish-price">₹1,950</span>
+            </div>
+            <p class="dish-desc">WhistlePig 10-Year Rye, Vermont maple tapped at autumn harvest, black walnut bitters, infused with charred cedar smoke under a glass cloche.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Artisanal Spirit</span>
+              </div>
+              <span class="sommelier-note">🍸 Crafted by Master Bartender</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Eclipse Old Fashioned">Reserve with this Drink →</a>
+          </div>
+        </article>
+
+        <!-- Dish 14: Drinks -->
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80" alt="Séléné Lunar 75" loading="lazy">
+            <span class="card-badge gold">Celestial Coupe</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Séléné Lunar 75</h3>
+              <span class="dish-price">₹1,850</span>
+            </div>
+            <p class="dish-desc">The Botanist Islay gin, organic butterfly pea flower infusion, fresh Meyer lemon juice, edible 24k gold shimmer, topped with Grand Brut Champagne.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Effervescent</span>
+              </div>
+              <span class="sommelier-note">🍸 House Signature Aperitif</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Séléné Lunar 75">Reserve with this Drink →</a>
+          </div>
+        </article>
+
+        <!-- Dish 15: Drinks -->
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80" alt="2018 Domaine Leflaive Puligny-Montrachet" loading="lazy">
+            <span class="card-badge">Grand Cellar Reserve</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="dish-title">Puligny-Montrachet, Leflaive</h3>
+              <span class="dish-price">₹3,200 / ₹16,500</span>
+            </div>
+            <p class="dish-desc">Crystalline White Burgundy. Aromas of white orchard flowers, crushed flint limestone, fresh brioche, and toasted hazelnuts with mineral depth.</p>
+            <div class="dish-meta">
+              <div class="dietary-tags">
+                <span class="dietary-pill">Vintage 2018</span>
+                <span class="dietary-pill">Grand Cru</span>
+              </div>
+              <span class="sommelier-note">🍷 Sommelier Selection</span>
+            </div>
+            <a href="#reservation" class="card-reserve-link" data-dish="Puligny-Montrachet">Reserve Wine Service →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Menu Footer Note -->
+      <div class="menu-footer-note reveal">
+        <p class="menu-curators">✦ Executive Chef Julian Vance &nbsp;·&nbsp; Head Sommelier Céline Laurent ✦</p>
+        <p class="dietary-legend">We accommodate bespoke dietary preferences, vegetarian journeys, and allergen protocols. Kindly inform our concierge.</p>
+        <div class="menu-reserve-action">
+          <a href="#reservation" class="btn-primary">Reserve an Evening at Maison Séléné</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 4. Social Gallery ===== -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <h2 class="reveal">La Melrose on Social</h2>
-      <p class="sub reveal">Fresh captures from our kitchen, wine cellar, and dining room. Tag <b>@lamelrose</b> to share your moments.</p>
+      <h2 class="reveal">Maison Séléné on Social</h2>
+      <p class="sub reveal">Fresh captures from our kitchen, wine cellar, and celestial dining room. Tag <b>@maisonselene</b> to share your moments.</p>
       <div class="insta-head reveal">
-        <span class="insta-handle">@lamelrose</span>
-        <span style="color:var(--ink-muted);font-size:14px">· 28.4K Food Enthusiasts</span>
+        <span class="insta-handle">@maisonselene</span>
+        <span style="color:var(--ink-muted);font-size:14px">· 34.8K Gastronomy Aficionados</span>
       </div>
       <div class="insta-grid reveal">
         <a class="insta-card" href="#gallery" aria-label="Reel — handmade pasta masterclass">
@@ -121,7 +478,7 @@
           <span class="insta-veil">
             <span class="likes">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.5C.4 8 2.4 4.5 6 4.5c2.2 0 3.8 1.2 6 3.6 2.2-2.4 3.8-3.6 6-3.6 3.6 0 5.6 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
-              128K views · Reel
+              142K views · Reel
             </span>
           </span>
         </a>
@@ -130,16 +487,16 @@
           <span class="insta-veil">
             <span class="likes">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.5C.4 8 2.4 4.5 6 4.5c2.2 0 3.8 1.2 6 3.6 2.2-2.4 3.8-3.6 6-3.6 3.6 0 5.6 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
-              3,214
+              4,520
             </span>
           </span>
         </a>
         <a class="insta-card" href="#gallery" aria-label="Post — main dining hall evening atmosphere">
-          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80" alt="Dining room interior with warm brass lighting">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80" alt="Dining room interior with warm brass lighting and chandeliers">
           <span class="insta-veil">
             <span class="likes">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.5C.4 8 2.4 4.5 6 4.5c2.2 0 3.8 1.2 6 3.6 2.2-2.4 3.8-3.6 6-3.6 3.6 0 5.6 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
-              2,876
+              3,892
             </span>
           </span>
         </a>
@@ -149,16 +506,16 @@
           <span class="insta-veil">
             <span class="likes">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.5C.4 8 2.4 4.5 6 4.5c2.2 0 3.8 1.2 6 3.6 2.2-2.4 3.8-3.6 6-3.6 3.6 0 5.6 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
-              96K views · Reel
+              118K views · Reel
             </span>
           </span>
         </a>
         <a class="insta-card" href="#gallery" aria-label="Post — catch of the day">
-          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=700&q=80" alt="Pan-seared Mediterranean sea bass with herbs">
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=700&q=80" alt="Pan-seared Mediterranean sea bass with saffron velouté">
           <span class="insta-veil">
             <span class="likes">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.5C.4 8 2.4 4.5 6 4.5c2.2 0 3.8 1.2 6 3.6 2.2-2.4 3.8-3.6 6-3.6 3.6 0 5.6 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
-              2,455
+              3,115
             </span>
           </span>
         </a>
@@ -167,26 +524,26 @@
           <span class="insta-veil">
             <span class="likes">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.5C.4 8 2.4 4.5 6 4.5c2.2 0 3.8 1.2 6 3.6 2.2-2.4 3.8-3.6 6-3.6 3.6 0 5.6 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
-              1,982
+              2,840
             </span>
           </span>
         </a>
       </div>
       <div class="gallery-cta reveal">
-        <a class="btn-primary" href="https://instagram.com" target="_blank" rel="noopener">Follow @lamelrose</a>
+        <a class="btn-primary" href="https://instagram.com" target="_blank" rel="noopener">Follow @maisonselene</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== 4. Reservation Section ===== -->
+  <!-- ===== 5. Reservation Section ===== -->
   <section class="reservation" id="reservation">
     <div class="container res-grid">
       <div class="res-info reveal">
-        <h2>Reserve your table and savor an unforgettable evening.</h2>
+        <h2>Reserve your table and savor an unforgettable evening at Maison Séléné.</h2>
         <p class="contact">
-          767 Renner Land, Lake Kylebury 27595<br>
+          42 Quai des Célestes, 75001 Paris &amp; Lake Kylebury<br>
           <a href="tel:+11234567890">+1 (123) 456-7890</a> &nbsp;·&nbsp; 
-          <a href="mailto:hello@lamelrose.com">hello@lamelrose.com</a>
+          <a href="mailto:concierge@maisonselene.com">concierge@maisonselene.com</a>
         </p>
         <div class="hours">
           <h3>Service Hours</h3>
@@ -200,17 +557,17 @@
           </div>
           <div class="hours-row">
             <span>Monday</span>
-            <span>Closed for Sourcing</span>
+            <span>Closed for Culinary Research</span>
           </div>
         </div>
       </div>
 
       <form class="res-card reveal" id="resForm" novalidate>
         <label for="rname">Your Full Name</label>
-        <input id="rname" type="text" placeholder="e.g. Marco Bellini" required autocomplete="name">
+        <input id="rname" type="text" placeholder="e.g. Julian Delacroix" required autocomplete="name">
 
         <label for="remail">Email Address</label>
-        <input id="remail" type="email" placeholder="e.g. marco@example.com" required autocomplete="email">
+        <input id="remail" type="email" placeholder="e.g. julian@example.com" required autocomplete="email">
 
         <label for="rphone">Phone Number</label>
         <input id="rphone" type="tel" placeholder="e.g. +1 (555) 019-2834" required autocomplete="tel">
@@ -244,21 +601,33 @@
           </div>
         </div>
 
-        <button class="res-btn" type="submit" id="submitResBtn">Confirm Reservation</button>
+        <div>
+          <label for="rexperience">Dining Preference &amp; Occasion</label>
+          <select id="rexperience">
+            <option value="standard">Main Brasserie Dining Hall</option>
+            <option value="tasting">5-Course Celestial Tasting Experience (₹14,500/guest)</option>
+            <option value="cellar">Private Sommelier Wine Cellar</option>
+            <option value="terrace">Moonlit Terrace &amp; Garden</option>
+          </select>
+        </div>
+
+        <button class="res-btn" type="submit" id="submitResBtn">Confirm Maison Séléné Reservation</button>
         <div class="form-msg" id="formMsg" role="alert"></div>
       </form>
     </div>
   </section>
 
-  <!-- ===== 5. Footer ===== -->
+  <!-- ===== 6. Footer ===== -->
   <footer id="footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#home" class="logo">La Melrose</a>
-          <p class="footer-tagline">COMFORT CLASSICS • BRASSERIE</p>
-          <p class="footer-addr">767 Renner Land, Lake Kylebury 27595</p>
-          <p class="copyright">© 2026 La Melrose Brasserie. All Rights Reserved.</p>
+          <a href="#home" class="logo">
+            <span class="logo-symbol">☽</span> Maison Séléné
+          </a>
+          <p class="footer-tagline">HAUTE GASTRONOMIE • CELESTIAL BRASSERIE</p>
+          <p class="footer-addr">42 Quai des Célestes, 75001 Paris &amp; Lake Kylebury</p>
+          <p class="copyright">© 2026 Maison Séléné. All Rights Reserved.</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -272,21 +641,22 @@
           <a href="#footer" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11 21 14v7h-4v-6.2c0-1.5-.03-3.4-2.07-3.4-2.07 0-2.39 1.6-2.39 3.3V21H9z"/></svg>
           </a>
-          <a href="#footer" aria-label="Email Concierge">
+          <a href="mailto:concierge@maisonselene.com" aria-label="Email Concierge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
         <nav class="footer-nav">
           <a href="#home">Home</a>
-          <a href="#gallery">Gallery</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Moments</a>
           <a href="#reservation">Reservations</a>
-          <a href="#footer">Contacts</a>
+          <a href="#footer">Contact</a>
         </nav>
       </div>
     </div>
   </footer>
 
-  <!-- ===== 6. Floating Quick-Reserve Action for Mobile ===== -->
+  <!-- ===== 7. Floating Quick-Reserve Action for Mobile ===== -->
   <a href="#reservation" class="mobile-fab" id="mobileFab" aria-label="Quick Reserve Table">
     <span>Book Table</span>
     <span>✦</span>
